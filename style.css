@@ -1,0 +1,65 @@
+body {
+    text-align: center;
+    background-color: #ffe6f2;
+    font-family: 'Mali', cursive;
+    overflow: hidden;
+}
+
+/* เคลื่อนไหวพื้นหลังด้วยหัวใจ */
+body::before {
+    content: "❤❤❤";
+    font-size: 50px;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: floatingHearts 3s infinite alternate;
+}
+
+@keyframes floatingHearts {
+    0% { transform: translate(-50%, 0); }
+    100% { transform: translate(-50%, -10px); }
+}
+
+/* กล่องเนื้อหา */
+.container {
+    margin-top: 50px;
+}
+
+/* ปุ่ม */
+button {
+    font-size: 24px;
+    padding: 15px 30px;
+    border: none;
+    background-color: #ff4081;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 0 10px pink;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #e91e63;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px pink;
+}
+
+/* กุหลาบ */
+#roseContainer {
+    margin-top: 20px;
+    position: relative;
+    height: 100vh;
+}
+
+.rose {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    animation: floatRose 3s infinite alternate;
+}
+
+@keyframes floatRose {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
