@@ -3,30 +3,20 @@ body {
     background-color: #ffe6f2;
     font-family: 'Mali', cursive;
     overflow: hidden;
+    transition: background 1s ease-in-out;
 }
 
-/* เคลื่อนไหวพื้นหลังด้วยหัวใจ */
-body::before {
-    content: "❤❤❤";
-    font-size: 50px;
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: floatingHearts 3s infinite alternate;
-}
-
-@keyframes floatingHearts {
-    0% { transform: translate(-50%, 0); }
-    100% { transform: translate(-50%, -10px); }
-}
-
-/* กล่องเนื้อหา */
+/* Scene 1 (Before Clicking) */
 .container {
     margin-top: 50px;
 }
 
-/* ปุ่ม */
+/* Hidden Scene */
+.hidden {
+    display: none;
+}
+
+/* Valentine Button */
 button {
     font-size: 24px;
     padding: 15px 30px;
@@ -45,7 +35,7 @@ button:hover {
     box-shadow: 0 0 20px pink;
 }
 
-/* กุหลาบ */
+/* Rose Style */
 #roseContainer {
     margin-top: 20px;
     position: relative;
@@ -62,4 +52,23 @@ button:hover {
 @keyframes floatRose {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
+}
+
+/* Scene 2 (After Clicking) */
+.love-text {
+    font-size: 50px;
+    color: red;
+    animation: fadeIn 1.5s;
+}
+
+.love-message {
+    font-size: 24px;
+    color: darkred;
+    animation: fadeIn 2s;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
