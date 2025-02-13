@@ -6,17 +6,12 @@ body {
     transition: background 1s ease-in-out;
 }
 
-/* Scene 1 (Before Clicking) */
-.container {
-    margin-top: 50px;
-}
-
-/* Hidden Scene */
+/* Hide scenes */
 .hidden {
     display: none;
 }
 
-/* Valentine Button */
+/* Button */
 button {
     font-size: 24px;
     padding: 15px 30px;
@@ -35,11 +30,14 @@ button:hover {
     box-shadow: 0 0 20px pink;
 }
 
-/* Rose Style */
+/* Roses float everywhere */
 #roseContainer {
-    margin-top: 20px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
+    pointer-events: none;
 }
 
 .rose {
